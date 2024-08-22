@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarioActivity">
+
+    <LinearLayout
+        android:id="@+id/calendarioLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="25dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            app:srcCompat="@drawable/_024_summer_olympics_text_logo_svg" />
+
+        <TextView
+            android:id="@+id/consEvenText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/consultaEventos"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="@string/seleccFecha"
+            android:inputType="text"
+            android:text=""
+            android:textAlignment="center" />
+
+        <TableLayout
+            android:id="@+id/eventosLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="321dp"
+            android:baselineAligned="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:stretchColumns="1"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/bvolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="volver"
+            android:text="@string/volver" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
